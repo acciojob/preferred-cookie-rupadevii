@@ -6,11 +6,11 @@ const cookies = document.cookie.split(";")
 
 cookies.forEach(cookie => {
 	const cookiee = cookie.split("=");
-	if(cookiee[0] === " fontsize") {
+	if(cookiee[0].trim() === "fontsize") {
 	root.style.setProperty('--fontsize', cookiee[1]+"px");
 	}
-	if(cookiee[0] === " fontcolor") {
-	root.style.setProperty('--fontcolor', cookiee[1]);
+	if(cookiee[0].trim() === "fontcolor") {
+	root.style.setProperty('--fontcolor', cookiee[1]);	
 	}
 })
 
